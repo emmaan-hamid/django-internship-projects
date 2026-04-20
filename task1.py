@@ -1,15 +1,15 @@
 #----------task 1----------
 
 name = input('Enter your name: ')
+num_subjects = int(input('How many subjects do you have? '))
 
-sub1 = float(input('Enter your marks for sub 1 out of 100: '))
-sub2 = float(input('Enter your marks for sub 2 out of 100: '))
-sub3 = float(input('Enter your marks for sub 3 out of 100: '))
-sub4 = float(input('Enter your marks for sub 4 out of 100: '))
-sub5 = float(input('Enter your marks for sub 5 out of 100: '))
+total_marks = 0
 
-total_marks = sub1 + sub2 + sub3 + sub4 + sub5
-percentage_result = total_marks / 5
+for i in range(1, num_subjects + 1):
+    marks = float(input(f'Enter marks for subject {i} out of 100: '))
+    total_marks = total_marks + marks
+
+percentage_result = total_marks / num_subjects
 
 if percentage_result >= 90:
     grade = 'A'
